@@ -3,6 +3,11 @@ from auth import registure_user, login_user
 
 def menu_home() -> None:
     """displays main menu and handles user navigation"""
+    users = load_cli
+
+    if users is None:
+        return
+
     while True:
         print("welcome to main menu")
         print("type to choose your option")
