@@ -1,9 +1,10 @@
-from auth import registure_user, login_user
+from storage import load_cli
+from auth import register_user, login_user
 
 
 def menu_home() -> None:
     """displays main menu and handles user navigation"""
-    users = load_cli
+    users = load_cli()
 
     if users is None:
         return
@@ -11,8 +12,6 @@ def menu_home() -> None:
     while True:
         print("welcome to main menu")
         print("type to choose your option")
-
-
         print("press 1: register a new user")
         print("press 2: login")
         print("press: 'exit' logout")
@@ -24,12 +23,12 @@ def menu_home() -> None:
             continue
 
         elif option == "1":
-            print("menu: registure selected")
-            registure_user()
+            print("menu: signup selected")
+            register_user(users)
 
         elif option == "2":
             print("menu: login selected")
-            login_user()
+            login_user(users)
 
         elif option == "exit":
             break
