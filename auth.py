@@ -62,18 +62,18 @@ def password_validation(password):
 
 
 
-def login_user(name, password):
+def login_user(name, password, users):
     """login a user"""
     while True:
         name = input("login name: ")
-        if not login_name_validation(name, storage):
+        if not login_name_validation(name, users):
             continue
 
         password = input("login password: ")
         if not password_validation(password):
             continue
 
-        storage[name] = password
+        users[name] = password
         if name in storage:
             if password == storage[name]:
                 print("success, you have logged in successfully!")
