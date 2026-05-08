@@ -39,13 +39,13 @@ def register_user(users):
 
 
 
-def login_name_validation(name, storage):
+def login_name_validation(name, users):
     """Validate a username"""
     if not name:
         print("Error: username cannot be empty.")
         return False
 
-    if not name in storage:
+    if not name in users:
         print("Error: username does not exist, try again!")
         return False
     return True
@@ -63,7 +63,7 @@ def password_validation(password):
 
 
 
-def login_user(name, password, users):
+def login_user(users):
     """login a user"""
     while True:
         name = input("login name: ")
