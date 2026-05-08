@@ -32,6 +32,7 @@ def register_user(users):
         save_cli(users)
 
         print("you have signed up! Thank you!")
+        return
 
 
 
