@@ -74,8 +74,8 @@ def login_user(name, password, users):
             continue
 
         users[name] = password
-        if name in storage:
-            if password == storage[name]:
+        if name in users:
+            if password == users[name]:
                 print("success, you have logged in successfully!")
                 return
 
