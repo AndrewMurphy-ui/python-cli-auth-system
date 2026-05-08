@@ -74,11 +74,12 @@ def login_user(users):
         if not password_validation(password):
             continue
 
-        users[name] = password
-        if name in users:
-            if password == users[name]:
-                print("success, you have logged in successfully!")
-                return
+        if password == users[name]:
+            print("success you have login successfully!")
+            return
+
+        print("error, please try again!")
+
 
 
 
