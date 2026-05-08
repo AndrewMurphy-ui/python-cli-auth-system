@@ -1,13 +1,12 @@
-from storage import storage
 
 
 
 
-def is_valid_username(name, storage):
+def is_valid_username(name, users):
     if not name:
         print("Error: username cannot be empty.")
         return False
-    if name in storage:
+    if name in users:
         print("Username already taken.")
         return False
     return True
@@ -18,20 +17,25 @@ def is_valid_password(password):
         return False
     return True
 
-def register_user(storage):
+def register_user(users):
     """Register a new user by prompting for a unique username and password."""
     while True:
         name = input("Enter a username: ").lower().strip()
-        if not is_valid_username(name, storage):
+        if not is_valid_username(name, users):
             continue
 
         password = input("Enter a password: ").strip()
         if not is_valid_password(password):
             continue
 
-        storage[name] = password
-        print("Signed up successfully!")
-        return
+        users[name] = password
+        save_cli(users)
+
+        print("you have signed up! Thank you!")
+
+
+
+
 
 
 def login_name_validation(name, storage):
