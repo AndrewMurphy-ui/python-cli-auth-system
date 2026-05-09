@@ -1,5 +1,5 @@
 from storage import load_cli
-from auth import register_user, login_user
+from auth import register_user, login_user, show_users
 
 
 def menu_home() -> None:
@@ -10,6 +10,7 @@ def menu_home() -> None:
         return
 
     while True:
+        print()
         print("Main Menu")
         print("-" * 30)
         print("type to choose your option")
@@ -34,6 +35,7 @@ def menu_home() -> None:
 
         elif option == "3":
             print("menu: show users selected")
+            show_users(users)
 
         elif option == "exit":
             break
