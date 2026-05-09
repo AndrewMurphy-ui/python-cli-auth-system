@@ -13,14 +13,14 @@ def menu_home() -> None:
         print()
         print("Main Menu")
         print("-" * 30)
-        print("type to choose your option")
+        print("Type to choose your option")
         print("press 1: register a new user")
         print("press 2: login")
         print("press 3: show users")
         print("press: 'exit' logout")
         print("-" * 30)
 
-        option = input("type to choose: ").lower().strip()
+        option = input("Type to choose: ").lower().strip()
 
         if option == "":
             print("error, cannot be blank, please try again")
