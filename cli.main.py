@@ -15,6 +15,7 @@ def menu_home() -> None:
         print("type to choose your option")
         print("press 1: register a new user")
         print("press 2: login")
+        print("press 3: show users")
         print("press: 'exit' logout")
 
         option = input("type to choose: ").lower().strip()
@@ -30,6 +31,9 @@ def menu_home() -> None:
         elif option == "2":
             print("menu: login selected")
             login_user(users)
+
+        elif option == "3":
+            print("menu: show users selected")
 
         elif option == "exit":
             break
