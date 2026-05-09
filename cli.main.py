@@ -10,7 +10,8 @@ def menu_home() -> None:
         return
 
     while True:
-        print("welcome to main menu")
+        print("Main Menu")
+        print("-" * 30)
         print("type to choose your option")
         print("press 1: register a new user")
         print("press 2: login")
