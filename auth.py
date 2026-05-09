@@ -12,8 +12,8 @@ def is_valid_username(name, users):
     return True
 
 def is_valid_password(password):
-    if not password:
-        print("Error: password cannot be empty.")
+    if password == "":
+        print("error password cannot empty!")
         return False
     return True
 
