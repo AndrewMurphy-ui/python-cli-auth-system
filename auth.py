@@ -86,7 +86,7 @@ def login_user(users):
 
 
 def show_users(users):
-
+    """Show users"""
     print()
     print("User Data")
     print("-" * 30)
