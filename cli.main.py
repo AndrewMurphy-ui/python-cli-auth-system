@@ -2,6 +2,23 @@ from storage import load_cli
 from auth import register_user, login_user, show_users
 
 
+def square_box(title, options):
+    width = 34
+
+    print("+" + "-" * width + "+")
+    print("|" + title.centre(width) + "|")
+    print("+" + "-" * width + "+")
+
+
+
+    for option in options:
+        print("| " + option.ljust(width - 2) + " |")
+        print("+" + "-" * width + "+")
+
+
+
+
+
 def menu_home() -> None:
     """displays main menu and handles user navigation"""
     users = load_cli()
@@ -10,15 +27,12 @@ def menu_home() -> None:
         return
 
     while True:
-        print()
-        print("Main Menu")
-        print("-" * 30)
-        print("Type to choose your option")
-        print("press 1: register a new user")
-        print("press 2: login")
-        print("press 3: show users")
-        print("press: 'exit' logout")
-        print("-" * 30)
+        square_box("Main Menu", [
+            "1. Register a new user",
+            "2. Login",
+            "3. Show users",
+            "exit. Logout"
+        ])
 
         option = input("Type to choose: ").lower().strip()
 
