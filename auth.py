@@ -3,8 +3,8 @@ from storage import save_cli
 
 
 def is_valid_username(name, users):
-    if not name:
-        print("Error: username cannot be empty.")
+    if name == "":
+        print("error, cannot be empty!")
         return False
     if name in users:
         print("Username already taken.")
