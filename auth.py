@@ -1,4 +1,4 @@
-from storage import save_cli
+from storage import save_cli, load_cli
 
 
 
@@ -82,6 +82,19 @@ def login_user(users):
 
 
 
+
+
+
+def show_users(users):
+    show_data = load_cli()
+
+
+    print()
+    print("User Data")
+    print("-" * 30)
+    for name, password in show_data.items():
+        print("username", name)
+        print("password", password)
 
 
 
