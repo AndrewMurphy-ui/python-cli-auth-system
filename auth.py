@@ -86,15 +86,20 @@ def login_user(users):
 
 
 def show_users(users):
-    show_data = load_cli()
-
 
     print()
     print("User Data")
     print("-" * 30)
-    for name, password in show_data.items():
+
+    if not users:
+        print("no expenses found")
+        return
+
+
+    for name, password in users.items():
         print("username", name)
         print("password", password)
+        print("-" * 30)
 
 
 

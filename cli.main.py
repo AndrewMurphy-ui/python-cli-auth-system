@@ -18,6 +18,7 @@ def menu_home() -> None:
         print("press 2: login")
         print("press 3: show users")
         print("press: 'exit' logout")
+        print("-" * 30)
 
         option = input("type to choose: ").lower().strip()
 
