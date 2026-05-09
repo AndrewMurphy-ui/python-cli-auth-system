@@ -6,7 +6,7 @@ def square_box(title, options):
     width = 34
 
     print("+" + "-" * width + "+")
-    print("|" + title.centre(width) + "|")
+    print("|" + title.center(width) + "|")
     print("+" + "-" * width + "+")
 
 
