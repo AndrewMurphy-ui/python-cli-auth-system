@@ -1,5 +1,7 @@
 
 
+
+
 def square_box(title, options):
     width = 34
 
@@ -10,29 +12,18 @@ def square_box(title, options):
     print("|" + title.center(width) + "|")
     print("+" + "-" * width + "+")
 
-
-
-    for option in options:
-        print("| " + option.ljust(width - 2) + " |")
-        print("+" + "-" * width + "+")
-
-
     if not options:
-        print("data not found")
+        print_line("No data found")
 
-
-    elif isinstance(title, dict):
+    elif isinstance(options, dict):
         for username, password in options.items():
             print_line("Username: " + username)
             print_line("Password: " + password)
             print_line("-" * (width - 2))
 
     else:
-        for content in options:
-            print_line(content)
-
-
-
+        for option in options:
+            print_line(option)
 
     print("+" + "-" * width + "+")
 
