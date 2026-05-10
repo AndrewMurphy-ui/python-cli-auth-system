@@ -84,22 +84,17 @@ def login_user(users):
 
 
 
-
 def show_users(users):
-    """Show users"""
-    print()
-    print("User Data")
-    print("-" * 30)
 
-    if not users:
-        print("no expenses found")
-        return
+    options = []
+
+    for name, password in users.items()
+        options.append("username" + name)
+        options.append("password" + password)
+
+    square_box("User Data", options)
 
 
-    for name, password in users.items():
-        print("username", name)
-        print("password", password)
-        print("-" * 30)
 
 
 
