@@ -85,14 +85,9 @@ def login_user(users):
 
 
 def show_users(users):
+    """Show registered users inside the square box."""
+    square_box("User Data", users)
 
-    options = []
-
-    if not users:
-        print("no users found")
-        return
-
-    for name, password in users.items():
 
 
 
