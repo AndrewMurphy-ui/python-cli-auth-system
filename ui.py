@@ -1,7 +1,5 @@
 
 
-
-
 def square_box(title, options):
     width = 34
 
