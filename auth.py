@@ -1,4 +1,4 @@
-from storage import save_cli, load_cli
+from ui import square_box
 
 
 
@@ -88,7 +88,7 @@ def show_users(users):
 
     options = []
 
-    for name, password in users.items()
+    for name, password in users.items():
         options.append("username" + name)
         options.append("password" + password)
 
