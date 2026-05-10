@@ -88,11 +88,17 @@ def show_users(users):
 
     options = []
 
+    if not users:
+        print("no users found")
+        return
+
     for name, password in users.items():
         options.append("username" + name)
         options.append("password" + password)
 
     square_box("User Data", options)
+
+
 
 
 
