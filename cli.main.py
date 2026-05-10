@@ -1,21 +1,6 @@
 from storage import load_cli
 from auth import register_user, login_user, show_users
-
-
-def square_box(title, options):
-    width = 34
-
-    print("+" + "-" * width + "+")
-    print("|" + title.center(width) + "|")
-    print("+" + "-" * width + "+")
-
-
-
-    for option in options:
-        print("| " + option.ljust(width - 2) + " |")
-        print("+" + "-" * width + "+")
-
-
+from ui import square_box
 
 
 
