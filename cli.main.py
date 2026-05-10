@@ -16,7 +16,7 @@ def menu_home() -> None:
             "1. Register a new user",
             "2. Login",
             "3. Show users",
-            "exit. Logout"
+            "type exit Logout"
         ])
 
         option = input("Type to choose: ").lower().strip()
