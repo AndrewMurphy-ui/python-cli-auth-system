@@ -93,10 +93,9 @@ def show_users(users):
         return
 
     for name, password in users.items():
-        options.append("username" + name)
-        options.append("password" + password)
 
-    square_box("User Data", options)
+
+
 
 
 
