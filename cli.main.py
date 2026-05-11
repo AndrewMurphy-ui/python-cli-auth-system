@@ -19,11 +19,13 @@ def menu_home() -> None:
             "type exit Logout"
         ])
 
-        option = input("Type to choose: ").lower().strip()
+        option = input("Type to choose: ").strip()
 
         if option == "":
             print("error, cannot be blank, please try again")
             continue
+
+
 
 
 
