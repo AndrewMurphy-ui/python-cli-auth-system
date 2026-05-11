@@ -25,7 +25,10 @@ def menu_home() -> None:
             print("error, cannot be blank, please try again")
             continue
 
-        elif option == "1":
+
+
+
+        if option == "1":
             print("menu: signup selected")
             register_user(users)
 
